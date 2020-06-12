@@ -167,8 +167,6 @@ export async function activate(context: vscode.ExtensionContext) {
     return;
   }
 
-  await promptForNodeJsProject();
-
   const configurationListener = vscode.workspace.onDidChangeConfiguration(
     (e) => {
       if (e.affectsConfiguration(configurationSection)) {
